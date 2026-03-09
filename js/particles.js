@@ -1,6 +1,5 @@
 particlesJS("particles-js", {
 particles: {
-
 number: {
 value: 80,
 density: {
@@ -9,13 +8,9 @@ value_area: 800
 }
 },
 
-color: {
-value: "#3b82f6"
-},
+color: { value: "#3b82f6" },
 
-shape: {
-type: "circle"
-},
+shape: { type: "circle" },
 
 opacity: {
 value: 0.5,
@@ -37,19 +32,11 @@ width: 1
 
 move: {
 enable: true,
-speed: 1.5,
-direction: "none",
-random: false,
-straight: false,
-out_mode: "out",
-bounce: false
+speed: 1.5
 }
-
 },
 
 interactivity: {
-
-detect_on: "canvas",
 
 events: {
 
@@ -61,17 +48,14 @@ mode: "repulse"
 onclick: {
 enable: true,
 mode: "push"
-},
-
-resize: true
+}
 
 },
 
 modes: {
 
 repulse: {
-distance: 120,
-duration: 0.4
+distance: 120
 },
 
 push: {
@@ -83,5 +67,4 @@ particles_nb: 4
 },
 
 retina_detect: true
-
 });
