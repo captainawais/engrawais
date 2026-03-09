@@ -1,5 +1,11 @@
+document.addEventListener("DOMContentLoaded", () => {
+
+const typingElement = document.getElementById("typing")
+
+if(!typingElement) return
+
 const text = [
-"Full Stack Software Engineer", 
+"Full Stack Software Engineer",
 "Building Scalable Web Platforms",
 "Software Engineer building scalable systems",
 "Creating modern websites",
@@ -15,17 +21,12 @@ function type(){
 let current = text[index]
 
 if(!deleting){
-
 char++
-
 }else{
-
 char--
-
 }
 
-document.getElementById("typing").textContent =
-current.substring(0,char)
+typingElement.textContent = current.substring(0,char)
 
 let speed = deleting ? 40 : 70
 
@@ -35,13 +36,12 @@ speed = 2000
 deleting = true
 
 }
-
 else if(deleting && char === 0){
 
 deleting = false
 index++
 
-if(index === text.length){
+if(index >= text.length){
 index = 0
 }
 
@@ -52,3 +52,5 @@ setTimeout(type,speed)
 }
 
 type()
+
+})
