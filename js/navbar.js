@@ -1,23 +1,33 @@
-const menuBtn = document.getElementById("menu-btn")
-const mobileMenu = document.getElementById("mobile-menu")
+document.addEventListener("DOMContentLoaded", () => {
 
-menuBtn.addEventListener("click", () => {
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const navbar = document.getElementById("navbar-main");
 
-mobileMenu.classList.toggle("hidden")
+  /* =========================
+     MOBILE MENU TOGGLE
+  ========================= */
 
-})
-const navbar = document.getElementById("navbar-main")
+  if(menuBtn && mobileMenu){
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
 
-window.addEventListener("scroll", () => {
+  /* =========================
+     NAVBAR SCROLL EFFECT
+  ========================= */
 
-if(window.scrollY > 80){
+  if(navbar){
+    window.addEventListener("scroll", () => {
 
-navbar.classList.add("bg-[#050816]")
+      if(window.scrollY > 80){
+        navbar.classList.add("nav-scrolled");
+      } else {
+        navbar.classList.remove("nav-scrolled");
+      }
 
-}else{
+    });
+  }
 
-navbar.classList.remove("bg-[#050816]")
-
-}
-
-})
+});
