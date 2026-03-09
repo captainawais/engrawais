@@ -7,3 +7,29 @@ background: radial-gradient(circle at 70% 40%,
 rgba(59,130,246,0.4),
 transparent 60%);
 }
+.btn-primary{
+background: linear-gradient(90deg,#3b82f6,#2563eb);
+padding:12px 28px;
+border-radius:10px;
+font-weight:500;
+transition:all .3s;
+box-shadow:0 10px 25px rgba(59,130,246,.4);
+}
+
+.btn-primary:hover{
+transform:translateY(-3px);
+box-shadow:0 20px 40px rgba(59,130,246,.6);
+}
+
+.btn-outline{
+border:1px solid rgba(255,255,255,.4);
+padding:12px 28px;
+border-radius:10px;
+transition:all .3s;
+}
+
+.btn-outline:hover{
+border-color:#3b82f6;
+box-shadow:0 10px 30px rgba(59,130,246,.4);
+transform:translateY(-3px);
+}
