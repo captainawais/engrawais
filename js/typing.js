@@ -1,51 +1,44 @@
 const text = [
-"Full Stack Software Engineer",
+"Full Stack Software Engineer", 
 "Building Scalable Web Platforms",
-"Designing Real World Digital Systems"
+"Software Engineer building scalable digital systems",
+"Creating modern web platforms",
+"Developing real-world software solutions"
 ]
 
 let index = 0
 let char = 0
+let current = ""
+let isDeleting = false
 
 function type(){
 
-if(char < text[index].length){
+current = text[index]
 
-document.getElementById("typing").innerHTML += text[index].charAt(char)
-
+if(!isDeleting){
 char++
-
-setTimeout(type,40)
-
 }else{
-
-setTimeout(erase,2000)
-
-}
-
-}
-
-function erase(){
-
-if(char > 0){
-
-document.getElementById("typing").innerHTML = text[index].substring(0,char-1)
-
 char--
+}
 
-setTimeout(erase,30)
+document.getElementById("typing").textContent = current.substring(0,char)
 
-}else{
+let speed = isDeleting ? 40 : 80
 
+if(!isDeleting && char === current.length){
+speed = 2000
+isDeleting = true
+}
+
+else if(isDeleting && char === 0){
+isDeleting = false
 index++
-
-if(index >= text.length){
+if(index === text.length){
 index = 0
 }
-
-setTimeout(type,500)
-
 }
+
+setTimeout(type,speed)
 
 }
 
