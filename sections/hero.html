@@ -1,19 +1,18 @@
-<section class="relative min-h-screen flex items-center overflow-hidden">
+<section class="relative min-h-screen flex items-center overflow-hidden text-white">
 
-<!-- Background -->
+<!-- PARTICLES BACKGROUND -->
 
-<div class="absolute inset-0 -z-10">
+<div id="particles-js" class="absolute inset-0 -z-20"></div>
 
-<img
-src="assets/images/hero-bg.png"
-class="w-full h-full object-cover"
-/>
+<!-- BACKGROUND IMAGE -->
 
+<div class="absolute inset-0 -z-30">
+<img src="assets/images/hero-bg.png" class="w-full h-full object-cover opacity-40">
 </div>
 
 <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 items-center px-6 lg:px-12">
 
-<!-- LEFT CONTENT -->
+<!-- LEFT SIDE -->
 
 <div class="text-center lg:text-left">
 
@@ -21,11 +20,15 @@ class="w-full h-full object-cover"
 Hi, I'm
 </p>
 
-<h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+<h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">
 Engr. Awais Farooq
 </h1>
 
-<p class="text-gray-400 text-lg max-w-xl mx-auto lg:mx-0 mb-8">
+<p class="text-blue-400 text-lg mb-6">
+<span id="typing"></span>
+</p>
+
+<p class="text-gray-400 text-lg max-w-xl mb-8 mx-auto lg:mx-0">
 Software Engineer building scalable digital systems,
 modern web platforms, and real-world software solutions.
 </p>
@@ -33,21 +36,21 @@ modern web platforms, and real-world software solutions.
 <div class="flex justify-center lg:justify-start gap-4 flex-wrap">
 
 <a href="#projects"
-class="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-lg font-medium transition shadow-lg">
+class="btn-primary">
 
 View Projects
 
 </a>
 
 <a href="https://github.com/captainawais"
-class="border border-gray-500 px-6 py-3 rounded-lg hover:border-blue-500 transition">
+class="btn-outline">
 
 GitHub
 
 </a>
 
 <a href="#contact"
-class="border border-gray-500 px-6 py-3 rounded-lg hover:border-blue-500 transition">
+class="btn-outline">
 
 Hire Me
 
@@ -61,12 +64,16 @@ Hire Me
 
 <div class="relative flex justify-center">
 
+<!-- glow -->
+
+<div class="absolute w-[420px] h-[420px] bg-blue-500 blur-[120px] opacity-30 rounded-full"></div>
+
 <img
 src="assets/images/awais.png"
 class="w-[320px] md:w-[420px] lg:w-[520px] relative z-10"
 />
 
-<!-- bottom fade effect -->
+<!-- fade bottom -->
 
 <div class="absolute bottom-0 w-full h-32 bg-gradient-to-t from-[#050816] to-transparent"></div>
 
