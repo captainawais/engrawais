@@ -1,56 +1,53 @@
 <section class="relative min-h-screen flex items-center overflow-hidden">
 
-<!-- background -->
+<!-- Background -->
 
-<div class="absolute inset-0">
+<div class="absolute inset-0 -z-10">
 
 <img
 src="assets/images/hero-bg.png"
-class="w-full h-full object-cover opacity-70"
+class="w-full h-full object-cover"
 />
 
 </div>
 
-<div class="relative max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center px-10">
+<div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 items-center px-6 lg:px-12">
 
-<!-- LEFT TEXT -->
+<!-- LEFT CONTENT -->
 
-<div>
+<div class="text-center lg:text-left">
 
-<p class="text-gray-400 text-xl mb-3">
+<p class="text-gray-400 text-lg mb-3">
 Hi, I'm
 </p>
 
-<h1 class="text-6xl font-bold mb-6">
+<h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
 Engr. Awais Farooq
 </h1>
 
-<p class="text-gray-400 text-lg leading-relaxed mb-10 max-w-xl">
-
-Software Engineer building scalable digital
-systems, modern web platforms, and real-world
-software solutions.
-
+<p class="text-gray-400 text-lg max-w-xl mx-auto lg:mx-0 mb-8">
+Software Engineer building scalable digital systems,
+modern web platforms, and real-world software solutions.
 </p>
 
-<div class="flex gap-4">
+<div class="flex justify-center lg:justify-start gap-4 flex-wrap">
 
 <a href="#projects"
-class="bg-blue-500 hover:bg-blue-600 px-7 py-3 rounded-lg font-medium shadow-lg">
+class="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-lg font-medium transition shadow-lg">
 
 View Projects
 
 </a>
 
 <a href="https://github.com/captainawais"
-class="border border-gray-500 px-7 py-3 rounded-lg hover:border-blue-500">
+class="border border-gray-500 px-6 py-3 rounded-lg hover:border-blue-500 transition">
 
 GitHub
 
 </a>
 
 <a href="#contact"
-class="border border-gray-500 px-7 py-3 rounded-lg hover:border-blue-500">
+class="border border-gray-500 px-6 py-3 rounded-lg hover:border-blue-500 transition">
 
 Hire Me
 
@@ -62,12 +59,16 @@ Hire Me
 
 <!-- RIGHT IMAGE -->
 
-<div class="flex justify-center">
+<div class="relative flex justify-center">
 
 <img
 src="assets/images/awais.png"
-class="w-[520px] max-w-full"
+class="w-[320px] md:w-[420px] lg:w-[520px] relative z-10"
 />
+
+<!-- bottom fade effect -->
+
+<div class="absolute bottom-0 w-full h-32 bg-gradient-to-t from-[#050816] to-transparent"></div>
 
 </div>
 
