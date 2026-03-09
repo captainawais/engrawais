@@ -1,49 +1,72 @@
-<nav id="navbar-main" class="navbar">
+<nav id="navbar-main"
+class="fixed top-0 w-full z-50 backdrop-blur-lg bg-[#050816]/70 border-b border-white/5">
 
-<div class="nav-container">
+<div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
 <!-- LOGO -->
 
-<a href="#" class="nav-logo">
-Engr<span>Awais</span>
+<a href="#hero"
+class="text-lg font-semibold tracking-wide text-white">
+
+Engr<span class="text-blue-500">Awais</span>
+
 </a>
 
 
 <!-- DESKTOP MENU -->
 
-<ul class="nav-menu">
+<ul class="hidden md:flex items-center gap-8 text-sm text-gray-300 font-medium">
 
-<li><a href="#hero">Home</a></li>
+<li>
+<a href="#hero" class="hover:text-white transition">Home</a>
+</li>
 
-<li><a href="#about">About</a></li>
+<li>
+<a href="#about" class="hover:text-white transition">About</a>
+</li>
 
-<li><a href="#skills">Skills</a></li>
+<li>
+<a href="#skills" class="hover:text-white transition">Skills</a>
+</li>
 
-<li><a href="#projects">Projects</a></li>
+<li>
+<a href="#projects" class="hover:text-white transition">Projects</a>
+</li>
 
-<li><a href="#achievements">Achievements</a></li>
+<li>
+<a href="#achievements" class="hover:text-white transition">Achievements</a>
+</li>
 
-<li><a href="#contact">Contact</a></li>
+<li>
+<a href="#contact"
+class="px-4 py-2 rounded-lg bg-blue-500 hover:bg-blue-600 transition">
+
+Contact
+
+</a>
+</li>
 
 </ul>
 
 
 <!-- MOBILE BUTTON -->
 
-<div class="menu-btn" id="menu-btn">
+<button id="menu-btn"
+class="md:hidden text-white text-2xl">
 
-<span></span>
-<span></span>
-<span></span>
+☰
 
-</div>
+</button>
 
 </div>
 
 
 <!-- MOBILE MENU -->
 
-<div class="mobile-menu" id="mobile-menu">
+<div id="mobile-menu"
+class="hidden md:hidden backdrop-blur-xl bg-[#050816]/95 border-t border-white/10">
+
+<div class="flex flex-col text-center py-6 space-y-4 text-gray-300">
 
 <a href="#hero">Home</a>
 <a href="#about">About</a>
@@ -51,6 +74,8 @@ Engr<span>Awais</span>
 <a href="#projects">Projects</a>
 <a href="#achievements">Achievements</a>
 <a href="#contact">Contact</a>
+
+</div>
 
 </div>
 
