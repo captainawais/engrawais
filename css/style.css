@@ -1,49 +1,217 @@
+/* =========================
+GLOBAL
+========================= */
+
 body{
 background:#050816;
+color:white;
+font-family:system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
 }
 
-.hero-glow{
-background: radial-gradient(circle at 70% 40%,
-rgba(59,130,246,0.4),
-transparent 60%);
+
+/* =========================
+HERO SECTION
+========================= */
+
+.hero-section{
+position:relative;
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
 }
+
+
+/* =========================
+PARTICLES BACKGROUND
+========================= */
+
+#particles-js{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-2;
+}
+
+
+/* =========================
+BACKGROUND IMAGE
+========================= */
+
+.hero-bg{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-3;
+}
+
+.hero-bg img{
+width:100%;
+height:100%;
+object-fit:cover;
+opacity:.35;
+}
+
+
+/* =========================
+HERO CONTAINER
+========================= */
+
+.hero-container{
+width:90%;
+max-width:1400px;
+
+display:grid;
+grid-template-columns:1fr 1fr;
+
+align-items:center;
+gap:5%;
+}
+
+
+/* =========================
+TEXT CONTENT
+========================= */
+
+.hero-text{
+width:100%;
+}
+
+.hero-intro{
+font-size:1.1rem;
+color:#9ca3af;
+margin-bottom:1rem;
+}
+
+.hero-title{
+font-size:clamp(2.5rem,6vw,4.5rem);
+font-weight:700;
+line-height:1.1;
+margin-bottom:1rem;
+}
+
+.hero-typing{
+height:32px;
+font-size:1.2rem;
+color:#60a5fa;
+margin-bottom:2rem;
+}
+
+
+/* =========================
+BUTTONS
+========================= */
+
+.hero-buttons{
+display:flex;
+gap:1rem;
+flex-wrap:wrap;
+}
+
 .btn-primary{
-background: linear-gradient(90deg,#3b82f6,#2563eb);
-padding:12px 28px;
+
+background:linear-gradient(90deg,#3b82f6,#2563eb);
+
+padding:.8rem 1.8rem;
+
 border-radius:10px;
+
 font-weight:500;
+
 transition:all .3s;
-box-shadow:0 10px 25px rgba(59,130,246,.4);
+
+box-shadow:0 10px 30px rgba(59,130,246,.4);
+
 }
 
 .btn-primary:hover{
+
 transform:translateY(-3px);
+
 box-shadow:0 20px 40px rgba(59,130,246,.6);
+
 }
 
 .btn-outline{
+
 border:1px solid rgba(255,255,255,.4);
-padding:12px 28px;
+
+padding:.8rem 1.8rem;
+
 border-radius:10px;
+
 transition:all .3s;
+
 }
 
 .btn-outline:hover{
+
 border-color:#3b82f6;
-box-shadow:0 10px 30px rgba(59,130,246,.4);
+
 transform:translateY(-3px);
+
+box-shadow:0 10px 30px rgba(59,130,246,.4);
+
 }
-.hero-img{
 
-mix-blend-mode: lighten;
 
--webkit-mask-image: linear-gradient(
+/* =========================
+HERO IMAGE
+========================= */
+
+.hero-image{
+position:relative;
+display:flex;
+justify-content:center;
+align-items:center;
+width:100%;
+}
+
+
+/* BLUE GLOW */
+
+.hero-glow{
+
+position:absolute;
+
+width:60%;
+
+aspect-ratio:1/1;
+
+background:radial-gradient(circle,
+rgba(59,130,246,.45),
+transparent 70%);
+
+filter:blur(140px);
+
+opacity:.4;
+
+border-radius:50%;
+
+}
+
+
+/* PROFILE IMAGE */
+
+.profile-img{
+
+width:70%;
+max-width:520px;
+
+mix-blend-mode:lighten;
+
+-webkit-mask-image:linear-gradient(
 to bottom,
 rgba(0,0,0,1) 70%,
 rgba(0,0,0,0)
 );
 
-mask-image: linear-gradient(
+mask-image:linear-gradient(
 to bottom,
 rgba(0,0,0,1) 70%,
 rgba(0,0,0,0)
@@ -51,3 +219,24 @@ rgba(0,0,0,0)
 
 }
 
+
+/* =========================
+MOBILE RESPONSIVE
+========================= */
+
+@media (max-width:900px){
+
+.hero-container{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.hero-buttons{
+justify-content:center;
+}
+
+.profile-img{
+width:80%;
+}
+
+}
