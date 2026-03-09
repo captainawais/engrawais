@@ -1,1 +1,9 @@
+body{
+background:#050816;
+}
 
+.hero-glow{
+background: radial-gradient(circle at 70% 40%,
+rgba(59,130,246,0.4),
+transparent 60%);
+}
