@@ -33,3 +33,21 @@ border-color:#3b82f6;
 box-shadow:0 10px 30px rgba(59,130,246,.4);
 transform:translateY(-3px);
 }
+.hero-img{
+
+mix-blend-mode: lighten;
+
+-webkit-mask-image: linear-gradient(
+to bottom,
+rgba(0,0,0,1) 70%,
+rgba(0,0,0,0)
+);
+
+mask-image: linear-gradient(
+to bottom,
+rgba(0,0,0,1) 70%,
+rgba(0,0,0,0)
+);
+
+}
+
