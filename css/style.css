@@ -1,5 +1,5 @@
 /* =========================
-GLOBAL
+GLOBAL RESET
 ========================= */
 
 *{
@@ -9,406 +9,48 @@ box-sizing:border-box;
 }
 
 body{
-
 background:#050816;
-
 color:white;
-
 font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
-
-line-height:1.6;
-
+overflow-x:hidden;
 }
 
+/* remove link underline */
+
+a{
+text-decoration:none;
+}
 
 /* =========================
-NAVBAR
+BUTTONS
 ========================= */
-
-.navbar{
-
-position:fixed;
-
-top:0;
-left:0;
-
-width:100%;
-
-z-index:1000;
-
-padding:18px 0;
-
-background:rgba(5,8,22,.55);
-
-backdrop-filter:blur(12px);
-
-border-bottom:1px solid rgba(255,255,255,.05);
-
-transition:.3s;
-
-}
-
-.navbar.scrolled{
-
-padding:10px 0;
-
-background:rgba(5,8,22,.9);
-
-}
-
-
-/* NAV CONTAINER */
-
-.nav-container{
-
-width:90%;
-
-max-width:1400px;
-
-margin:auto;
-
-display:flex;
-
-align-items:center;
-
-justify-content:space-between;
-
-}
-
-
-/* LOGO */
-
-.nav-logo{
-
-font-size:20px;
-
-font-weight:600;
-
-letter-spacing:.3px;
-
-}
-
-.nav-logo span{
-
-color:#3b82f6;
-
-}
-
-
-/* MENU */
-
-.nav-menu{
-
-display:flex;
-
-gap:32px;
-
-}
-
-.nav-menu a{
-
-font-size:15px;
-
-color:#9ca3af;
-
-transition:.25s;
-
-}
-
-.nav-menu a:hover{
-
-color:white;
-
-}
-
-
-/* MOBILE MENU BUTTON */
-
-.menu-btn{
-
-display:none;
-
-flex-direction:column;
-
-gap:5px;
-
-cursor:pointer;
-
-}
-
-.menu-btn span{
-
-width:26px;
-
-height:3px;
-
-background:white;
-
-border-radius:3px;
-
-}
-
-
-/* MOBILE MENU */
-
-.mobile-menu{
-
-display:none;
-
-flex-direction:column;
-
-background:#050816;
-
-padding:1rem 2rem;
-
-}
-
-.mobile-menu a{
-
-padding:.9rem 0;
-
-border-bottom:1px solid rgba(255,255,255,.05);
-
-}
-
-
-/* =========================
-HERO SECTION
-========================= */
-
-.hero-section{
-
-position:relative;
-
-min-height:100vh;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-overflow:hidden;
-
-padding-top:90px;
-
-}
-
-
-/* PARTICLES */
-
-#particles-js{
-
-position:absolute;
-
-top:0;
-left:0;
-
-width:100%;
-height:100%;
-
-z-index:-2;
-
-}
-
-
-/* BACKGROUND */
-
-.hero-bg{
-
-position:absolute;
-
-top:0;
-left:0;
-
-width:100%;
-height:100%;
-
-z-index:-3;
-
-}
-
-.hero-bg img{
-
-width:100%;
-
-height:100%;
-
-object-fit:cover;
-
-opacity:.35;
-
-}
-
-
-/* HERO GRID */
-
-.hero-container{
-
-width:90%;
-
-max-width:1400px;
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-align-items:center;
-
-gap:6%;
-
-}
-
-
-/* TEXT */
-
-.hero-text{
-
-width:100%;
-
-}
-
-.hero-intro{
-
-font-size:16px;
-
-color:#9ca3af;
-
-margin-bottom:12px;
-
-}
-
-.hero-title{
-
-font-size:clamp(2.6rem,6vw,4.2rem);
-
-font-weight:700;
-
-line-height:1.1;
-
-margin-bottom:14px;
-
-}
-
-.hero-typing{
-
-height:32px;
-
-font-size:18px;
-
-color:#60a5fa;
-
-margin-bottom:28px;
-
-}
-
-
-/* BUTTONS */
-
-.hero-buttons{
-
-display:flex;
-
-gap:16px;
-
-flex-wrap:wrap;
-
-}
 
 .btn-primary{
-
-background:linear-gradient(90deg,#3b82f6,#2563eb);
-
-padding:12px 26px;
-
-border-radius:10px;
-
-font-weight:500;
-
-transition:.3s;
-
+@apply bg-blue-500 text-white px-6 py-3 rounded-lg font-medium transition;
 box-shadow:0 10px 30px rgba(59,130,246,.4);
-
 }
 
 .btn-primary:hover{
-
-transform:translateY(-3px);
-
+transform:translateY(-2px);
 box-shadow:0 20px 40px rgba(59,130,246,.6);
-
 }
 
 .btn-outline{
-
-border:1px solid rgba(255,255,255,.4);
-
-padding:12px 26px;
-
-border-radius:10px;
-
-transition:.3s;
-
+@apply border border-white/30 text-white px-6 py-3 rounded-lg transition;
 }
 
 .btn-outline:hover{
-
 border-color:#3b82f6;
-
-transform:translateY(-3px);
-
-box-shadow:0 10px 30px rgba(59,130,246,.4);
-
+background:rgba(59,130,246,.1);
 }
 
-
-/* HERO IMAGE */
-
-.hero-image{
-
-position:relative;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-}
-
-
-/* BLUE GLOW */
-
-.hero-glow{
-
-position:absolute;
-
-width:65%;
-
-aspect-ratio:1/1;
-
-background:radial-gradient(circle,
-rgba(59,130,246,.45),
-transparent 70%);
-
-filter:blur(140px);
-
-opacity:.45;
-
-border-radius:50%;
-
-}
-
-
-/* PROFILE IMAGE */
+/* =========================
+HERO IMAGE
+========================= */
 
 .profile-img{
-
-width:70%;
-
-max-width:520px;
-
 mix-blend-mode:screen;
+filter:drop-shadow(0 40px 80px rgba(0,0,0,.6));
 
 -webkit-mask-image:linear-gradient(
 to bottom,
@@ -421,52 +63,27 @@ to bottom,
 rgba(0,0,0,1) 75%,
 rgba(0,0,0,0)
 );
-
 }
-
 
 /* =========================
-RESPONSIVE
+NAVBAR GLASS EFFECT
 ========================= */
 
-@media (max-width:900px){
-
-.hero-container{
-
-grid-template-columns:1fr;
-
-text-align:center;
-
+.navbar{
+backdrop-filter:blur(12px);
+background:rgba(5,8,22,.6);
+border-bottom:1px solid rgba(255,255,255,.05);
 }
 
-.hero-buttons{
+/* =========================
+PARTICLES LINES
+========================= */
 
-justify-content:center;
-
-}
-
-.profile-img{
-
-width:80%;
-
-}
-
-.nav-menu{
-
-display:none;
-
-}
-
-.menu-btn{
-
-display:flex;
-
-}
-
-.mobile-menu.active{
-
-display:flex;
-
-}
-
+#particles-js{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
 }
