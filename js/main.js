@@ -28,17 +28,17 @@ startTyping()
 LOAD ALL SECTIONS
 ========================= */
 
-loadSection("navbar","sections/navbar.html")
-loadSection("hero","sections/hero.html")
-loadSection("about","sections/about.html")
-loadSection("skills","sections/skills.html")
-loadSection("projects","sections/projects.html")
-loadSection("achievements","sections/achievements.html")
-loadSection("certifications","sections/certifications.html")
-loadSection("education","sections/education.html")
-loadSection("blog","sections/blog.html")
-loadSection("contact","sections/contact.html")
-loadSection("footer","sections/footer.html")
+loadSection("navbar","./sections/navbar.html")
+loadSection("hero","./sections/hero.html")
+loadSection("about","./sections/about.html")
+loadSection("skills","./sections/skills.html")
+loadSection("projects","./sections/projects.html")
+loadSection("achievements","./sections/achievements.html")
+loadSection("certifications","./sections/certifications.html")
+loadSection("education","./sections/education.html")
+loadSection("blog","./sections/blog.html")
+loadSection("contact","./sections/contact.html")
+loadSection("footer","./sections/footer.html")
 
 
 
