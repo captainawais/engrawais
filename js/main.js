@@ -84,7 +84,24 @@ nav.classList.remove("scrolled")
 
 })
 
+/* =========================
+NAVBAR ACTIVE GLOW BAR
+========================= */
 
+document.addEventListener("mouseover",function(e){
+
+const link = e.target.closest("#navbar-main ul li a")
+const indicator = document.querySelector(".nav-indicator")
+
+if(!link || !indicator) return
+
+const rect = link.getBoundingClientRect()
+const parent = link.closest("ul").getBoundingClientRect()
+
+indicator.style.width = rect.width + "px"
+indicator.style.left = (rect.left - parent.left) + "px"
+
+})
 
 /* =========================
 PARTICLES START
