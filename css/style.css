@@ -83,6 +83,11 @@ background:rgba(5,8,22,.6);
 border-bottom:1px solid rgba(255,255,255,.05);
 transition:all 0.3s ease;
 }
+#navbar-main{
+height:60px;
+display:flex;
+align-items:center;
+}
 
 #navbar-main a{
 position:relative;
@@ -92,6 +97,64 @@ position:relative;
 box-shadow:0 0 6px rgba(59,130,246,0.35);
 }
 
+/* =========================
+NAVBAR LINK GLOW EFFECT
+========================= */
+
+#navbar-main ul li a{
+position:relative;
+border-radius:9999px;
+padding:6px 16px;
+transition:all .25s ease;
+}
+
+/* soft capsule hover */
+
+#navbar-main ul li a:hover{
+color:white;
+background:rgba(59,130,246,0.12);
+box-shadow:0 0 10px rgba(59,130,246,0.35);
+border:1px solid rgba(59,130,246,0.25);
+}
+
+/* subtle futuristic glow */
+
+#navbar-main ul li a::after{
+content:"";
+position:absolute;
+inset:0;
+border-radius:9999px;
+opacity:0;
+transition:opacity .25s ease;
+background:radial-gradient(circle at center,
+rgba(59,130,246,.35),
+transparent 70%);
+}
+
+#navbar-main ul li a:hover::after{
+opacity:.35;
+}
+
+/* =========================
+NAVBAR ACTIVE INDICATOR
+========================= */
+
+#navbar-main ul{
+position:relative;
+}
+
+/* glow bar */
+
+.nav-indicator{
+position:absolute;
+bottom:-4px;
+height:2px;
+width:0;
+background:#3b82f6;
+border-radius:10px;
+transition:all .3s ease;
+box-shadow:0 0 10px rgba(59,130,246,.7);
+}
 /* =========================
 PARTICLES LINES
 ========================= */
