@@ -52,7 +52,7 @@ if(e.target.closest("#menu-btn")){
 
 document
 .getElementById("mobile-menu")
-.classList.toggle("active")
+.classList.toggle("hidden")
 
 }
 
