@@ -84,6 +84,14 @@ border-bottom:1px solid rgba(255,255,255,.05);
 transition:all 0.3s ease;
 }
 
+#navbar-main a{
+position:relative;
+}
+
+#navbar-main a:hover{
+box-shadow:0 0 12px rgba(59,130,246,0.4);
+}
+
 /* =========================
 PARTICLES LINES
 ========================= */
