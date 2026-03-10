@@ -14,8 +14,10 @@ document.getElementById(id).innerHTML = data
 
 if(id === "hero"){
 
+setTimeout(()=>{
 startParticles()
 startTyping()
+},100)
 
 }
 
@@ -88,18 +90,19 @@ nav.classList.remove("scrolled")
 NAVBAR ACTIVE GLOW BAR
 ========================= */
 
-document.addEventListener("mouseover",function(e){
-
-const link = e.target.closest("#navbar-main ul li a")
 const indicator = document.querySelector(".nav-indicator")
 
-if(!link || !indicator) return
+document.querySelectorAll("#navbar-main ul li a").forEach(link=>{
+
+link.addEventListener("mouseenter",()=>{
 
 const rect = link.getBoundingClientRect()
 const parent = link.closest("ul").getBoundingClientRect()
 
 indicator.style.width = rect.width + "px"
 indicator.style.left = (rect.left - parent.left) + "px"
+
+})
 
 })
 
