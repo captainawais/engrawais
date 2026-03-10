@@ -22,7 +22,7 @@ overflow-x:hidden;
 /* remove link underline */
 
 a{
-text-decoration:none;
+text-decoration:none !important;
 }
 
 /* =========================
