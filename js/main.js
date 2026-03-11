@@ -21,29 +21,13 @@ startTyping()
 
 }
 
-/* NAVBAR LOADED */
+/* NAVBAR LOAD HO TO NAV FEATURES START */
 
 if(id === "navbar"){
 
 setTimeout(()=>{
 
-const indicator = document.querySelector(".nav-indicator")
-
-if(!indicator) return
-
-document.querySelectorAll("#navbar-main ul li a").forEach(link=>{
-
-link.addEventListener("mouseenter",()=>{
-
-const rect = link.getBoundingClientRect()
-const parent = link.closest("ul").getBoundingClientRect()
-
-indicator.style.width = rect.width + "px"
-indicator.style.left = (rect.left - parent.left) + "px"
-
-})
-
-})
+initNavbar()
 
 },50)
 
@@ -69,6 +53,74 @@ loadSection("education","./sections/education.html")
 loadSection("blog","./sections/blog.html")
 loadSection("contact","./sections/contact.html")
 loadSection("footer","./sections/footer.html")
+
+
+
+/* =========================
+NAVBAR INITIALIZER
+========================= */
+
+function initNavbar(){
+
+const menuBtn = document.getElementById("menu-btn")
+const mobileMenu = document.getElementById("mobile-menu")
+const navbar = document.getElementById("navbar-main")
+
+/* MOBILE MENU */
+
+if(menuBtn && mobileMenu){
+
+menuBtn.addEventListener("click",()=>{
+
+mobileMenu.classList.toggle("hidden")
+
+})
+
+}
+
+/* SCROLL EFFECT */
+
+if(navbar){
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY > 80){
+
+navbar.classList.add("nav-scrolled")
+
+}else{
+
+navbar.classList.remove("nav-scrolled")
+
+}
+
+})
+
+}
+
+/* NAV INDICATOR */
+
+const indicator = document.querySelector(".nav-indicator")
+
+if(indicator){
+
+document.querySelectorAll("#navbar-main ul li a").forEach(link=>{
+
+link.addEventListener("mouseenter",()=>{
+
+const rect = link.getBoundingClientRect()
+const parent = link.closest("ul").getBoundingClientRect()
+
+indicator.style.width = rect.width + "px"
+indicator.style.left = (rect.left - parent.left) + "px"
+
+})
+
+})
+
+}
+
+}
 
 
 
