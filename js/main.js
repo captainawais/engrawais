@@ -21,7 +21,29 @@ startTyping()
 
 }
 
+/* NAVBAR LOADED */
+
+if(id === "navbar"){
+
+setTimeout(()=>{
+
+const indicator = document.querySelector(".nav-indicator")
+
+document.querySelectorAll("#navbar-main ul li a").forEach(link=>{
+
+link.addEventListener("mouseenter",()=>{
+
+const rect = link.getBoundingClientRect()
+const parent = link.closest("ul").getBoundingClientRect()
+
+indicator.style.width = rect.width + "px"
+indicator.style.left = (rect.left - parent.left) + "px"
+
 })
+
+})
+
+},50)
 
 }
 
