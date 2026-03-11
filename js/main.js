@@ -45,48 +45,6 @@ loadSection("footer","./sections/footer.html")
 
 
 /* =========================
-NAVBAR MOBILE MENU
-========================= */
-
-document.addEventListener("click",function(e){
-
-if(e.target.closest("#menu-btn")){
-
-document
-.getElementById("mobile-menu")
-.classList.toggle("hidden")
-
-}
-
-})
-
-
-
-/* =========================
-NAVBAR SCROLL EFFECT
-========================= */
-
-window.addEventListener("scroll",function(){
-
-const nav = document.getElementById("navbar-main")
-
-if(nav){
-
-if(window.scrollY > 60){
-
-nav.classList.add("scrolled")
-
-}else{
-
-nav.classList.remove("scrolled")
-
-}
-
-}
-
-})
-
-/* =========================
 NAVBAR ACTIVE GLOW BAR
 ========================= */
 
